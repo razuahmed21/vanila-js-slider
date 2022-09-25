@@ -6,3 +6,74 @@ body {
 	height: 100%;
 	width: 100%;
 }
+img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+.slider-wrapper {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+.slider-wrapper .slider-hidden {
+	display: none;
+}
+.slider-wrapper .single-slider {
+	display: none;
+	position: relative;
+}
+.slider-wrapper .single-slider h1 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	font-size: 100px;
+	font-weight: 900;
+	color: #fff;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	animation: rightAnimation 2.5s;
+	-webkit-text-stroke: 1px #434044;
+}
+.slider-wrapper .slider-visible {
+	display: block;
+	animation: leftAnimation 1.5s;
+}
+
+.next-pre-action {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.next-pre-action button {
+	background-image: linear-gradient(to top, #a1f5f0 0%, #b490ca 100%);
+	color: #fff;
+	border: none;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 0 15px;
+}
+@keyframes leftAnimation {
+	from {
+		margin-left: -100%;
+	}
+	to {
+		margin-left: 0;
+	}
+}
+@keyframes rightAnimation {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0;
+	}
+}
